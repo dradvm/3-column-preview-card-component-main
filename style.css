@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--Verylightgray);
+}
+.attribution {
+    bottom: 0;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100%;font-size: 11px; 
+    text-align: center;
+}
+:root {
+    --Brightorange: hsl(31, 77%, 52%);
+    --Darkcyan: hsl(184, 100%, 22%);
+    --Verydarkcyan: hsl(179, 100%, 13%);
+    --Transparentwhite:  hsla(0, 0%, 100%, 0.75);
+    --Verylightgray: hsl(0, 0%, 95%)
+
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+button {
+    cursor: pointer;
+    border: none;
+}
+.card {
+    display: flex;
+    position: fixed;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+}
+.card__container {
+    display: flex;
+    width: 61%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.card__item {
+    width: 33.33333%;
+    padding: 32px;
+    padding-bottom: 128px;
+    position: relative;
+}
+.card__item--sedan {
+    background-color: var(--Brightorange);
+}
+.card__item--suv {
+    background-color: var(--Darkcyan);
+}
+.card__item--luxury {
+    background-color: var(--Verydarkcyan);
+}
+.card__item--sedan .card__btn{
+    color: var(--Brightorange);
+}
+.card__item--suv .card__btn{
+    color: var(--Darkcyan);
+}
+.card__item--luxury .card__btn{
+    color: var(--Verydarkcyan);
+}
+.card__icon {
+    width: 55px;
+}
+.card__title {
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: var(--Verylightgray);
+}
+.card__description {
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--Transparentwhite);
+    font-size: 15px;
+    line-height: 1.5;
+}
+.card__icon,
+.card__title,
+.card__description {
+    margin: 16px 0px
+}
+.card__btn {
+    padding: 12px 26px;
+    border-radius: 20px;
+    font-family: 'Lexend Deca', sans-serif;
+    position: absolute;
+    bottom: 10%;
+}
+.card__btn:active {
+    border: 1px solid var(--Verylightgray);
+    background-color: transparent;
+    color: var(--Verylightgray);
+}
+.card__btn:hover {
+    border: 1px solid var(--Verylightgray);
+    transition: .3s;
+}
+@media (min-width: 740px) and (max-width:1023px) {
+    .card__container {
+        width: 82%;
+    }
+}
+@media (max-width: 739px) {
+    .card {
+        position: initial;
+        padding: 32px 0px;
+    }
+    .card__container {
+        width: 90%;
+        flex-direction: column;
+    }
+    .card__item {
+        width: 100%;
+    }
+
+}
